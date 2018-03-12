@@ -22,7 +22,7 @@ public class ReportActionKeys extends TestBase {
 	public static void setReportLocation(String reportPath){
 		System.out.println("----------->    method called");
 		report=new ExtentReports(reportPath);
-	report.loadConfig(new File("D:\\sree\\wings\\config.xml"));
+	report.loadConfig(new File("C:\\Users\\sgarlapati\\git\\wings\\config.xml"));
 	
 	}
 public static void startTest(String testName){
@@ -40,7 +40,7 @@ public static void writeLogToReport(){
 }
 public static void appendToExstingReport(String path){
 	report=new ExtentReports(path, false);
-	report.loadConfig(new File("D:\\sree\\wings\\config.xml"));
+	report.loadConfig(new File("C:\\Users\\sgarlapati\\git\\wings\\config.xml"));
 }
 public static void writeLogInfo(String stepDetails){
 	logger.log(LogStatus.INFO,stepDetails);
@@ -72,7 +72,7 @@ public static void addScreenShotInReport(String name){
 		 
 		 
 		 
-		  shotPath="*\\git\\wings\\screenshots"+name+".png";
+		  shotPath="C://Reports\\"+name+".png";
 	 } catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
