@@ -69,7 +69,10 @@ public static void addScreenShotInReport(String name){
 	 try {
 		 
 		 FileUtils.copyFile(scrFile, new File("C://Reports\\"+ name+".png"));
-		  shotPath="C://Report\\"+name+".png";
+		 
+		 
+		 
+		  shotPath="*\\git\\wings\\screenshots"+name+".png";
 	 } catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
