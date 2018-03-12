@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="73391" started-at="2018-03-09T07:30:59Z" finished-at="2018-03-09T07:32:13Z">
+    <groups>
+    </groups>
+    <test name="loans" duration-ms="73391" started-at="2018-03-09T07:30:59Z" finished-at="2018-03-09T07:32:13Z">
+      <class name="savingpages.SavingAccountCreation">
+        <test-method status="PASS" signature="savingaccount()[pri:0, instance:savingpages.SavingAccountCreation@a14b94]" name="savingaccount" duration-ms="57885" started-at="2018-03-09T13:01:15Z" finished-at="2018-03-09T13:02:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- savingaccount -->
+        <test-method status="PASS" signature="handle(org.testng.ITestResult)[pri:0, instance:savingpages.SavingAccountCreation@a14b94]" name="handle" is-config="true" duration-ms="1" started-at="2018-03-09T13:02:13Z" finished-at="2018-03-09T13:02:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=savingaccount status=SUCCESS method=SavingAccountCreation.savingaccount()[pri:0, instance:savingpages.SavingAccountCreation@a14b94] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handle -->
+      </class> <!-- savingpages.SavingAccountCreation -->
+      <class name="framework.Login">
+        <test-method status="PASS" signature="login()[pri:0, instance:framework.Login@11bedec]" name="login" duration-ms="15472" started-at="2018-03-09T13:00:59Z" finished-at="2018-03-09T13:01:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="handle()[pri:0, instance:framework.Login@11bedec]" name="handle" is-config="true" duration-ms="23" started-at="2018-03-09T13:01:15Z" finished-at="2018-03-09T13:01:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handle -->
+      </class> <!-- framework.Login -->
+    </test> <!-- loans -->
+  </suite> <!-- Suite1 -->
+</testng-results>

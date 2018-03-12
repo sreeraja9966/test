@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extentreports>
+    <configuration>
+    <theme>dark</theme>
+    	
+        <encoding>UTF-8</encoding>
+        <documentTitle>WingsAutomatioReport</documentTitle> <!-- This title will be displayed as browser title for the page -->
+        <reportName><![CDATA[
+                <img  width="100"  height="48" align="left" vspace="00" src='http://goo.gl/images/1VMXhB' />
+            ]]></reportName>
+             <!-- This will be your report heading -->
+        <styles><![CDATA[
+              element.style{font-size: 500%;}
+        ]]></styles>
+        
+        <reportHeadline>AUTOMATION REPORT</reportHeadline>
+        
+        <!-- custom styles -->
+<styles>
+   <![CDATA[
+            .report-name { padding-left: 0px; } .report-name > img { float: left;height: 50;margin-left: 50px;margin-top: 0px;width:50; }
+        ]]>
+</styles>
+        // allow automatic saving of media files relative to the report
+htmlReporter.config().setAutoCreateRelativePathMedia(true);
+    </configuration>
+     
+</extentreports>
+
+

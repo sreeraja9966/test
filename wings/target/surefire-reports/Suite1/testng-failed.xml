@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite1]" parallel="none">
+  <test name="loans(failed)" parallel="none">
+    <classes>
+      <class name="framework.Login">
+        <methods>
+          <include name="login"/>
+          <include name="handle"/>
+        </methods>
+      </class> <!-- framework.Login -->
+    </classes>
+  </test> <!-- loans(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

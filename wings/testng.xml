@@ -1,0 +1,33 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1" parallel="none" verbose="1" >
+  <test name="loans" >
+    <classes>
+    
+     
+     <class name="framework.Login" />
+   
+    </classes>
+  </test>
+  <!-- <test name="savings" >.
+    <classes>
+    <class name="framework.Login" />
+     <class name="odpages.OdAccountCreation" />
+     <class name="utilities.AccountModification" >
+       <methods><include name="modificationModule"/>
+        </methods>
+            </class>
+            <class name="loanpages.LoanAccountCreation" />
+     <class name="loanpages.LoanAccountCreation" />
+      <class name="odpages.OdAccountCreation" />
+      <class name="currentpages.CurrentAccountCreation" />
+      <class name="fdPages.FdAccountCreation" />
+       <class name="savingpages.SavingAccountCreation" />
+    <class name="KYC.KycCreation" />
+     <class name="currentpages.CurrentAccountCreation" />
+       <class name="savingpages.SavingAccountCreation" />
+     <class name="savingpages.SavingAccountCreation" /> 
+       <class name="savingpages.CashReceipt" />
+        
+    </classes>
+  </test> -->
+ </suite>

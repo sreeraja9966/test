@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="19" started-at="2018-01-03T10:19:11Z" finished-at="2018-01-03T10:19:11Z">
+    <groups>
+    </groups>
+    <test name="loans" duration-ms="19" started-at="2018-01-03T10:19:11Z" finished-at="2018-01-03T10:19:11Z">
+      <class name="testingMaven.App">
+        <test-method status="PASS" signature="rrr()[pri:0, instance:testingMaven.App@119015b]" name="rrr" duration-ms="9" started-at="2018-01-03T15:49:11Z" finished-at="2018-01-03T15:49:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rrr -->
+      </class> <!-- testingMaven.App -->
+    </test> <!-- loans -->
+  </suite> <!-- Suite1 -->
+</testng-results>

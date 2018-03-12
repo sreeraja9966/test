@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.746 sec <<< FAILURE! - in TestSuite
+login(framework.Login)  Time elapsed: 15.282 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Wings - Banking Application Software] but found [IRIS - Banking Application Software]
+	at framework.Login.login(Login.java:15)
+
