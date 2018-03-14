@@ -17,7 +17,7 @@
         </methods>
             </class>
             <class name="loanpages.LoanAccountCreation" />
-     <class name="loanpages.LoanAccountCreation" />
+     <class name="lroanpages.LoanAccountCreation" />
       <class name="odpages.OdAccountCreation" />
       <class name="currentpages.CurrentAccountCreation" />
       <class name="fdPages.FdAccountCreation" />

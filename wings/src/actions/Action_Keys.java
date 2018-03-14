@@ -44,7 +44,7 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.Test;
 
-import com.thoughtworks.selenium.webdriven.commands.IsElementPresent;
+
 
 import common.FindElement;
 import excel.ExcelUtils;
@@ -715,4 +715,21 @@ public static void goldOrnamentLink(String requiredString,String weight){
 	Action_Keys.AcceptAlret();
 	d.switchTo().window(parent);
 }
+
+
+public static void compareTwoStrings(String xpath,String expected){
+	String present=FindElement.searchClickableElement(d, xpath).getText();
+	try{
+		
+	Assert.assertEquals(present, expected);
+	}
+	catch(Exception e){
+		ReportActionKeys.writeLogInCaseOfFail("Expected String is "+expected+"  but the String present on the screen is "+present);
+		ReportActionKeys.addScreenShotInReport(expected+" ::::: Expected String is Not Matched");
+	}
+}
+
+
+
+
 }

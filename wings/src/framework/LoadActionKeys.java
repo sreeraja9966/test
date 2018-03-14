@@ -203,6 +203,11 @@ public class LoadActionKeys {
 		case "openNewTab":
 			Action_Keys.openNewTab(testObject);
 			break;
+			
+		case "compareTwoStrings":
+			Action_Keys.compareTwoStrings(testObject, testData);
+			break;
+			
 		/*case "sikuliClick":
 			Action_Keys.sikuliClick(testData);
 			break;

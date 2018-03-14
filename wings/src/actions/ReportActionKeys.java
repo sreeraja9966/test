@@ -40,7 +40,7 @@ public static void writeLogToReport(){
 }
 public static void appendToExstingReport(String path){
 	report=new ExtentReports(path, false);
-	report.loadConfig(new File("C:\\Users\\sgarlapati\\git\\wings\\config.xml"));
+	report.loadConfig(new File(relativePath()+"\\config.xml"));
 }
 public static void writeLogInfo(String stepDetails){
 	logger.log(LogStatus.INFO,stepDetails);
@@ -62,18 +62,25 @@ public static void getcurrentRunStatus(){
 	logger.getRunStatus();
 }
 public static void addScreenShotInReport(String name){
-	String shotPath=null;
-	File scrFile = ((TakesScreenshot)d).getScreenshotAs(OutputType.FILE);
+	String destination =null;
+	
     //The below method will save the screen shot in d drive with name "screenshot.png"
-       
+	System.out.println("--------->addingScreenShotInReport");
+	
+	
 	 try {
+	 File scr = ((TakesScreenshot)d).getScreenshotAs(OutputType.FILE);
+       
+	System.out.println(scr);
 		 
-		 FileUtils.copyFile(scrFile, new File("C://Reports\\"+ name+".png"));
+		 //FileUtils.copyFile(scr, new File(relativePath()+"/screenshots/"+ name+".png"));
 		 
 		 
 		 
-		  shotPath="C://Reports\\"+name+".png";
-	 } catch (IOException e) {
+	 destination =relativePath()+"\\screenshots/"+name+".png";
+	 File finalDestination = new File(destination);
+	 FileUtils.copyFile(scr, finalDestination);
+	 } catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -81,6 +88,6 @@ public static void addScreenShotInReport(String name){
 	
 	
 	
-	logger.log(LogStatus.INFO,"ScreentShot ::"+name+" "+logger.addScreenCapture(shotPath));
+	logger.log(LogStatus.FAIL,"ScreentShot ::"+name+" "+logger.addScreenCapture(destination ));
 }
 }

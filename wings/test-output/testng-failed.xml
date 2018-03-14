@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="currentpages.CurrentAccountCreation">
+      <class name="framework.Login">
         <methods>
-          <include name="currentaccount"/>
           <include name="login"/>
+          <include name="handle"/>
         </methods>
-      </class> <!-- currentpages.CurrentAccountCreation -->
+      </class> <!-- framework.Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

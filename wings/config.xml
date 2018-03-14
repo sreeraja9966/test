@@ -6,7 +6,7 @@
         <encoding>UTF-8</encoding>
         <documentTitle>WingsAutomatioReport</documentTitle> <!-- This title will be displayed as browser title for the page -->
         <reportName><![CDATA[
-                <img  width="100"  height="48" align="left" vspace="00" src='http://goo.gl/images/1VMXhB' />
+                <img  width="100"  height="48" align="left" vspace="00" src="..\ReportUI\image.png" />
             ]]></reportName>
              <!-- This will be your report heading -->
         <styles><![CDATA[

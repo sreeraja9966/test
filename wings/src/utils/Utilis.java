@@ -14,24 +14,24 @@ public class Utilis {
 	
 	
 	public static WebDriver d;
-	
+	public static String localDir;
 
 public static WebDriver strartBrowser(String browser){
 	System.out.println("-------> browser called");
 	if(browser.equals("firefox")){
-		d= new FirefoxDriver();
-		d.manage().window().maximize();
+		System.setProperty("webdriver.gecko.driver",relativePath()+"\\Drivers\\geckodriver.exe");
+		 d = new FirefoxDriver();
 		
 		return d;
 			}
 	else if(browser.equals("chrome")){
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\sgarlapati\\Downloads\\chromedriver_win32");
+		System.setProperty("webdriver.chrome.driver", relativePath()+"\\Drivers\\chromedriver.exe");
 		d= new ChromeDriver();
 		return d;
 		}
 	else if(browser.equalsIgnoreCase("ie")){
 		try{
-		System.setProperty("webdriver.ie.driver", "C:\\Users\\sgarlapati\\Downloads\\IEDriverServer_Win32_2.53.0"+"\\IEDriverServer.exe");
+		System.setProperty("webdriver.ie.driver", relativePath()+"\\Drivers\\IEDriverServer.exe");
 		d= new InternetExplorerDriver();
 		d.manage().window().maximize();
 		return d;}
@@ -47,6 +47,10 @@ public static void implictwait(int time)
 	d.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS );
 }
 
+public static String relativePath(){
+	localDir = System.getProperty("user.dir");
+	return localDir;
+}
 
 public static void sleep(int time){
 	try {

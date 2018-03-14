@@ -13,8 +13,14 @@ public class VerifyTitle extends TestBase{
 	
 	public static void verify(String title){
 	
-		
-		Assert.assertEquals(d.getTitle(), title);
+		try{
+			
+			Assert.assertEquals(d.getTitle(), title);
+			}
+			catch(Error e){
+				ReportActionKeys.writeLogInCaseOfFail("Expected String is "+title+"  but the String present on the screen is "+d.getTitle());
+				ReportActionKeys.addScreenShotInReport(title+"  Expected String is Not Matched");
+			}
 			/*if(d.getTitle().equals(title.trim())){
 				
 			ReportActionKeys.writeLogInCaseOfPass("Titile verified ");

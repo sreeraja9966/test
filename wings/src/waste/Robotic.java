@@ -8,7 +8,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.thoughtworks.selenium.webdriven.commands.KeyEvent;
 
 public class Robotic {
 	

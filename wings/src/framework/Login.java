@@ -11,10 +11,13 @@ public class Login extends TestBase{
 	
 	@Test
 	public void login(){
-		
+		try{
 		DriverScript.loadExcel("E://wings//wingslogin.xls","Sheet1","TC_01");
 //		System.out.println(d.getTitle());
-	
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
 	}
 	@AfterMethod
 	public void handle(){
