@@ -34,7 +34,7 @@ import static io.restassured.RestAssured.given;
 
 public class HttpURLConnectionExample extends TestBase{
 	
-	public static String  getDb(String query) throws  ClassNotFoundException, SQLException {	
+/*	public static String  getDb(String query) throws  ClassNotFoundException, SQLException {	
 		try{String dbUrl = "jdbc:postgresql://192.168.0.32/Base_4.8.0";					
 		String username = "postgres";	
 			String password = "password";	
@@ -143,7 +143,7 @@ public static void splInstr(String instructionId,String instructionIdDb)  throws
 
 		//Fetching the desired value of a parameter
 		
-		/*System.out.println("**************"+JSONResponseBody.getString(instructionId));
+		System.out.println("**************"+JSONResponseBody.getString(instructionId));
 		String instruction = JSONResponseBody.getString(instructionId);
 		System.out.println("Result from PostMan:----->    "+instruction);
 		
@@ -168,11 +168,11 @@ public static void splInstr(String instructionId,String instructionIdDb)  throws
 		else{System.out.println("DATA NOT MATCHED WITH DATABASe");
 			
 		}
-		*/
+		
 		
 }
 @DataProvider(name="accountinfo")
 public Object[][] postData(){
 	return DataDrivenFor.data("C://Users//sgarlapati//Desktop//testingPostman.xls","Sheet1");
-}
+}*/
 }

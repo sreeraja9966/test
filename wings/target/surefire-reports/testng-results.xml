@@ -2,16 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="18818" started-at="2018-03-14T07:28:47Z" finished-at="2018-03-14T07:29:06Z">
+  <suite name="Suite1" duration-ms="17315" started-at="2018-03-21T06:25:59Z" finished-at="2018-03-21T06:26:17Z">
     <groups>
     </groups>
-    <test name="loans" duration-ms="18818" started-at="2018-03-14T07:28:47Z" finished-at="2018-03-14T07:29:06Z">
-      <class name="waste.MouseHover">
-        <test-method status="PASS" signature="test()[pri:0, instance:waste.MouseHover@10399e]" name="test" duration-ms="18802" started-at="2018-03-14T12:58:47Z" finished-at="2018-03-14T12:59:06Z">
+    <test name="loans" duration-ms="17315" started-at="2018-03-21T06:25:59Z" finished-at="2018-03-21T06:26:17Z">
+      <class name="framework.Login">
+        <test-method status="PASS" signature="login()[pri:0, instance:framework.Login@e26948]" name="login" duration-ms="16408" started-at="2018-03-21T11:55:59Z" finished-at="2018-03-21T11:56:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-      </class> <!-- waste.MouseHover -->
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="handle()[pri:0, instance:framework.Login@e26948]" name="handle" is-config="true" duration-ms="892" started-at="2018-03-21T11:56:16Z" finished-at="2018-03-21T11:56:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handle -->
+      </class> <!-- framework.Login -->
     </test> <!-- loans -->
   </suite> <!-- Suite1 -->
 </testng-results>

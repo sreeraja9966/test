@@ -34,7 +34,7 @@ public class OdAccountCreation extends TestBase {
 	
 	@AfterMethod
 	public void handle(){
-		ReportActionKeys.endTest();
+		ReportActionKeys.endParent();
 		ReportActionKeys.writeLogToReport();
 			
 		}

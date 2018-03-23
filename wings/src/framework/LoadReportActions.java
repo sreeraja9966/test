@@ -7,7 +7,7 @@ public class LoadReportActions {
 	public static void LoadReportactionkeys(String actionKeyword,String testObject,String testData  ){
 
 		
-		
+	/*	
 		switch(actionKeyword){
 		case "setReportLocation":
 			ReportActionKeys.setReportLocation(testData);
@@ -36,13 +36,11 @@ public class LoadReportActions {
 			break;
 		
 		
-		case "endTest":
-			ReportActionKeys.endTest();
-			break;
+	
 			
 		case "addScreenShotInReport":
 			ReportActionKeys.addScreenShotInReport(testData);
 			break;
 		default:
-			System.out.println("Not found");
-}}}
+			System.out.println("Not found");*/
+}}

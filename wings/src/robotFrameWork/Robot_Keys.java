@@ -14,13 +14,13 @@ public class Robot_Keys extends AdjustResolution{
 	
 	public static void roboMouseOperation(String mouseOperation){
 		
-		if(mouseOperation.equalsIgnoreCase("left")){
+		if(mouseOperation.equalsIgnoreCase("leftClick")){
 			AdjustResolution.robo.delay(1500);
 			AdjustResolution.robo.mousePress(InputEvent.BUTTON1_DOWN_MASK);
 			AdjustResolution.robo.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 			
 		}
-		else if(mouseOperation.equalsIgnoreCase("right")){
+		else if(mouseOperation.equalsIgnoreCase("rightClick")){
 	AdjustResolution.robo.delay(1500);
 	AdjustResolution.robo.mousePress(InputEvent.BUTTON3_DOWN_MASK);
 	AdjustResolution.robo.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);

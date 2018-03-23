@@ -12,6 +12,8 @@ import testBase.TestBase;
 public class LoadActionKeys {
 	public static Action_Keys obj = new Action_Keys();
 	
+	public static ReportActionKeys obj1 = new ReportActionKeys();
+	
 
 	public static void actionkeys(String actionKeyword,String testObject,String testData,int testDataAsInt1,int testDataAsInt2){	
 		switch(actionKeyword){
@@ -64,7 +66,9 @@ public class LoadActionKeys {
 		case "dropdownbyindex":
 			obj.ddownbyindex(testObject);
 			break;
-			
+		case "clickWithJavaExecuter":
+			Action_Keys.clickWithJavaExecuter(testObject);
+			break;
 		case "clickLink":
 			obj.clickLnk(testObject);
 			break;
@@ -114,7 +118,13 @@ public class LoadActionKeys {
 		case "closeChildWindow":
 			Action_Keys.closeChildWindow(testData);
 			break;
+		case "closeSilverlight":
+			obj.closeSilverlight();
+			break;
 			
+		case "clickSilverlight":
+			obj.clickSilverlight(testObject);
+			break;
 		/*case "getVoucherNumber":
 			Action_Keys.getVoucherNumber(testObject,testData);
 			break;*/
@@ -150,11 +160,15 @@ public class LoadActionKeys {
 			Action_Keys.DatePicker();
 			break;
 		case "setReportLocation":
-			ReportActionKeys.setReportLocation(testData);
+			obj1.setReportLocation(testData);
 			break;
 
 		case "startTestInReport":
-			ReportActionKeys.startTest(testData);
+			obj1.startTest(testData);
+			break;
+			
+		case "startChildTest":
+			ReportActionKeys.ChildTest(testData);
 			break;
 		
 		case "writeLogToReport":
@@ -163,27 +177,50 @@ public class LoadActionKeys {
 		
 		
 		case "appendToExstingReport":
-			ReportActionKeys.appendToExstingReport(testData);
+			obj1.appendToExstingReport(testData);
 			break;
 			
 		case "writeLogInfo":
 			ReportActionKeys.writeLogInfo(testData);
 			break;
+			
+		case "writeLogInfoInChildTest":
+			ReportActionKeys.writeLogInfoInChildTest(testData);
+			break;
+			
 		case "writeLogInCaseOfPass":
 			ReportActionKeys.writeLogInCaseOfPass(testData);
+			break;
+		case "writeLogInCaseOfPassInChildTest":
+			ReportActionKeys.writeLogInCaseOfPassInChildTest(testData);
 			break;
 		
 		case "writeLogInCaseOfFail":
 			ReportActionKeys.writeLogInCaseOfFail(testData);
 			break;
+		case "writeLogInCaseOfFailInChildTest":
+			ReportActionKeys.writeLogInCaseOfFailInChildTest(testData);
+			break;
 		
 		
+		case "endChildTest":
+			ReportActionKeys.endChild();
+			break;
+			
+			
+			
 		case "endTest":
-			ReportActionKeys.endTest();
+			ReportActionKeys.endParent();
+			break;
+		case "appendChildTest":
+			ReportActionKeys.appendChild();
 			break;
 			
 		case "addScreenShotInReport":
 			ReportActionKeys.addScreenShotInReport(testData);
+			break;
+		case "addScreenShotInCaseOfFailInReport":
+			ReportActionKeys.addScreenShotInCaseOfFailInReport(testData);
 			break;
 		case "VerifyTitle":
 			VerifyTitle.verify(testData);

@@ -55,9 +55,12 @@ import testBase.TestBase;
 
 public class Action_Keys extends TestBase {
 	
+	public String parentwindow=null;
+	
 	/*public static Screen s=new Screen();
 	public static Pattern p;*/
 	public static AppiumDriver<MobileElement> and ;
+	
 	public static void input(String testObj, String testData){
 		
 		WebElement element=FindElement.searchClickableElement(d, testObj);
@@ -69,10 +72,10 @@ public class Action_Keys extends TestBase {
 		
 		
 	}
-	public static boolean isElementPresent(By locatorKey) {
+	public static boolean isElementPresent(String locatorKey) {
 		d.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		try {
-		    d.findElement((locatorKey));
+		    d.findElement(By.xpath(locatorKey));
 		   return true;
 		} catch (NoSuchElementException e) {
 		   return false;
@@ -86,9 +89,9 @@ public class Action_Keys extends TestBase {
 			By obj=By.xpath(testObj);
 		
 			//d.findElement(By.xpath(testObj)).click();
-		System.out.println(	isElementPresent(By.xpath(testObj)));
+		System.out.println(	isElementPresent((testObj)));
 		
-		if(isElementPresent(By.xpath(testObj))){
+		if(isElementPresent((testObj))){
 			d.findElement(obj).click();
 		}
 		else{try {
@@ -276,7 +279,7 @@ public class Action_Keys extends TestBase {
          
 		 try {
 			 
-			 FileUtils.copyFile(scrFile, new File("E://screenshots\\"+ filename+".png"));
+			 FileUtils.copyFile(scrFile, new File(relativePath()+"\\screenshots\\"+ filename+".png"));
 				
 		 } catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -348,8 +351,12 @@ try {
 	    System.out.println("alert was not present");
 	else
 	    System.out.println("alert was present");
-	d.switchTo().alert().accept();
+	d.switchTo().alert().dismiss();
 } catch (Exception e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+catch (Error e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
@@ -567,7 +574,7 @@ public static void clickElementUsingLoop(String xpath){
 
 public static void clickUsingJavaScript(String xpath){
 	
-	WebElement element=d.findElement(By.xpath(xpath));
+	WebElement element=d.findElement(By.xpath(xpath.trim()));
 	JavascriptExecutor js = (JavascriptExecutor)d;
 	js.executeScript("arguments[0].click();", element);
 }
@@ -718,18 +725,96 @@ public static void goldOrnamentLink(String requiredString,String weight){
 
 
 public static void compareTwoStrings(String xpath,String expected){
-	String present=FindElement.searchClickableElement(d, xpath).getText();
+	Action_Keys.sleep(3000);
+	
 	try{
-		
-	Assert.assertEquals(present, expected);
+	String present=FindElement.searchClickableElement(d, xpath).getText();
+	
+	try{
+		System.out.println(present.trim());
+	Assert.assertEquals(present.trim(), expected.trim());
+	ReportActionKeys.writeLogInCaseOfPass("String present on UI is "+present+"-->String matched With "+expected);
 	}
-	catch(Exception e){
+	catch(Error e){
+		e.printStackTrace();
 		ReportActionKeys.writeLogInCaseOfFail("Expected String is "+expected+"  but the String present on the screen is "+present);
-		ReportActionKeys.addScreenShotInReport(expected+" ::::: Expected String is Not Matched");
+		ReportActionKeys.addScreenShotInReport(expected+"  Expected String is Not Matched");
+	}}
+	catch(Exception e){try {
+		throw new Exception("invalid");
+	} catch (Exception e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
+		
 	}
 }
 
 
+	public static String getDate() {
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd/hh/mm/ss/");
+		Date date = new Date();
+		return dateFormat.format(date);
+	}
 
+public static void clickWithJavaExecuter(String id){
+	WebElement element = d.findElement(By.id(id));
+	JavascriptExecutor executor = (JavascriptExecutor)d;
+	executor.executeScript("arguments[0].click();", element);
+}
+
+
+public  void clickSilverlight(String xpath){
+	
+	try {
+		this.parentwindow=d.getWindowHandle();
+		Action_Keys.clickWithJavaExecuter(xpath);
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+
+
+}
+
+
+public  void closeSilverlight(){
+	
+	d.close();
+	System.out.println(parentwindow);
+	d.switchTo().window(parentwindow);
+	
+	
+	/* String winHandleBefore = parentwindow;
+	 for (String winHandle : d.getWindowHandles()) {
+	   // Switch to child window
+	   d.switchTo().window(winHandle);
+	 }
+
+	// Do some operation on child window and get child window handle.
+	String winHandleAfter = d.getWindowHandle();
+
+	//switch to child window of 1st child window.
+	for(String winChildHandle : d.getWindowHandles()) {
+	  // Switch to child window of the 1st child window.
+	  if(!winChildHandle.equals(winHandleBefore) 
+	 ) {
+	    d.switchTo().window(winChildHandle);
+	   }
+	 }
+
+	// Do some operation on child window of 1st child window.
+	// to close the child window of 1st child window.
+	d.close();
+
+	// to close the child window.
+	d.close();
+
+	// to switch to parent window.
+	d.switchTo().window(winHandleBefore);*/
+
+
+}
 
 }

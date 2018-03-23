@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import actions.Action_Keys;
 import actions.ReportActionKeys;
 import testBase.TestBase;
 
@@ -19,8 +20,24 @@ public static WebElement searchClickableElement(WebDriver d,String xpath){
 	WebElement ele=null;
 	
 	try{
+		
+	if(	Action_Keys.isElementPresent(xpath)){
+		
 	ele=w.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath.trim())));
 	return ele;}
+	else{
+		try {
+		System.out.println("xpath not found");
+		throw new Exception("@@@@@@@@@@");
+	} 
+		catch (Exception e) {
+			System.out.println("Catch---1");
+			e.printStackTrace();
+			ReportActionKeys.writeLogInCaseOfFail(xpath+" is invalid");
+			ReportActionKeys.addScreenShotInReport("invalid xpath ");
+			ReportActionKeys.endParent();
+			ReportActionKeys.writeLogToReport();
+	}}}
 	catch(Exception e){
 		System.out.println("case failed");
 		ReportActionKeys.writeLogInCaseOfFail(xpath+" is invalid");

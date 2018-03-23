@@ -2,20 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17998" started-at="2018-03-14T11:48:30Z" finished-at="2018-03-14T11:48:48Z">
+  <suite name="Default suite" duration-ms="1745137" started-at="2018-03-22T13:46:03Z" finished-at="2018-03-22T14:15:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17998" started-at="2018-03-14T11:48:30Z" finished-at="2018-03-14T11:48:48Z">
-      <class name="framework.Login">
-        <test-method status="PASS" signature="login()[pri:0, instance:framework.Login@e81285]" name="login" duration-ms="17950" started-at="2018-03-14T17:18:30Z" finished-at="2018-03-14T17:18:48Z">
+    <test name="Default test" duration-ms="1745137" started-at="2018-03-22T13:46:03Z" finished-at="2018-03-22T14:15:08Z">
+      <class name="usPayments.Login">
+        <test-method status="PASS" signature="logIn()[pri:0, instance:usPayments.Login@883ce7]" name="logIn" duration-ms="1745124" started-at="2018-03-22T19:16:03Z" finished-at="2018-03-22T19:45:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="handle()[pri:0, instance:framework.Login@e81285]" name="handle" is-config="true" duration-ms="34" started-at="2018-03-14T17:18:48Z" finished-at="2018-03-14T17:18:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- handle -->
-      </class> <!-- framework.Login -->
+        </test-method> <!-- logIn -->
+      </class> <!-- usPayments.Login -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

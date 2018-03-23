@@ -37,7 +37,7 @@ import static io.restassured.RestAssured.given;
 
 public class HttpURLConnectionExample2 extends TestBase{
 	
-	public static String keyFromExcel=null;
+	/*public static String keyFromExcel=null;
 public static	String dataFromPS=null;
 public static	String datafromDB=null;
 	
@@ -163,7 +163,7 @@ public static void splInstr(String instructionId,String instructionIdDb)  throws
 
 		//Fetching the desired value of a parameter
 		
-		/*System.out.println("**************"+JSONResponseBody.getString(instructionId));
+		System.out.println("**************"+JSONResponseBody.getString(instructionId));
 		String instruction = JSONResponseBody.getString(instructionId);
 		System.out.println("Result from PostMan:----->    "+instruction);
 		
@@ -188,7 +188,7 @@ public static void splInstr(String instructionId,String instructionIdDb)  throws
 		else{System.out.println("DATA NOT MATCHED WITH DATABASe");
 			
 		}
-		*/
+		
 		
 
 @DataProvider(name="accountinfo")
@@ -197,7 +197,7 @@ public Object[][] postData(){
 }
 @AfterMethod
 public void writeReport(){
-	ReportActionKeys.endTest();
+	ReportActionKeys.endParent();
 	ReportActionKeys.writeLogToReport();
-}
+}*/
 }

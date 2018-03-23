@@ -21,7 +21,8 @@ public class Login extends TestBase{
 	}
 	@AfterMethod
 	public void handle(){
-		ReportActionKeys.endTest();
+		System.out.println("afterMethod ######### Executed");
+		ReportActionKeys.endParent();
 		ReportActionKeys.writeLogToReport();
 			
 		}

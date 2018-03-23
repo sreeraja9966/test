@@ -23,7 +23,7 @@ import waste.UrlPrinting;
 import waste.callGson;
 
 public class Api {
-	public static String instructionId=null;
+	/*public static String instructionId=null;
 	public static String query=null;
 	public static int size=0;
 	public static String keyFromExcel=null;
@@ -104,10 +104,10 @@ public class Api {
 		
 	@AfterTest
 	public void writeReport(){
-		ReportActionKeys.endTest();
+		ReportActionKeys.endParent();
 		ReportActionKeys.writeLogToReport();
 	}
-	
+	*/
 		}
 		
 	

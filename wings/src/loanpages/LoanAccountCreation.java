@@ -47,7 +47,7 @@ public class LoanAccountCreation extends TestBase{
 	
 	@AfterMethod
 	public void handle(){
-		ReportActionKeys.endTest();
+		ReportActionKeys.endParent();
 		ReportActionKeys.writeLogToReport();
 			
 		}
