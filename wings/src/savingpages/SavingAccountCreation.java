@@ -26,7 +26,7 @@ public class SavingAccountCreation extends TestBase {
 	
 	public void savingaccount(){
 		
-		DriverScript.loadExcel("E://wings//savingaccountcreation.xls","Login Test","TC_01");
+		DriverScript.loadExcel(relativePath()+"\\excelFile\\savingaccountcreation.xls","Login Test","TC_01");
 		
 	}
 	

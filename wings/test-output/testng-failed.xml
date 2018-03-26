@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]" parallel="none">
+  <test name="loans(failed)" parallel="none">
     <classes>
-      <class name="usPayments.Login">
+      <class name="waste.SilverScreen">
         <methods>
-          <include name="logIn"/>
+          <include name="testing"/>
         </methods>
-      </class> <!-- usPayments.Login -->
+      </class> <!-- waste.SilverScreen -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- loans(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

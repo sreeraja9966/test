@@ -4,7 +4,7 @@
     <classes>
     
      
-     <class name="framework.Login" />
+     <class name="savingpages.SavingAccountCreation" />
    
     </classes>
   </test>

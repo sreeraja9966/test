@@ -1,5 +1,6 @@
 package common;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import org.testng.Assert;
@@ -20,20 +21,22 @@ public class VerifyTitle extends TestBase{
 			
 			
 			
-			assertTrue(d.getTitle().contains(title));
-			ReportActionKeys.writeLogInCaseOfPass("Page Title is "+d.getTitle()+" and expected Title is "+title.trim()+"   --> Title Matched");
+		Assert.assertEquals(d.getTitle(), title);
+		
+		System.out.println("Page Title is "+d.getTitle()+" and expected Title is "+title.trim()+"   --> Title Matched");
+			//ReportActionKeys.writeLogInCaseOfPass("Page Title is "+d.getTitle()+" and expected Title is "+title.trim()+"   --> Title Matched");
 		
 			
 		
 		}
-		catch(Exception e){
-			ReportActionKeys.writeLogInCaseOfFailInChildTest("Expected String is "+"' "+title+" '"+"  but the String present on the screen is "+"' "+d.getTitle()+" '");
-			ReportActionKeys.addScreenShotInCaseOfFailInReport(title+"  Expected String is Not Matched");
+		catch(Exception e){System.out.println("TITLE NOT MATCHED");
+			/*ReportActionKeys.writeLogInCaseOfFailInChildTest("Expected String is "+"' "+title+" '"+"  but the String present on the screen is "+"' "+d.getTitle()+" '");
+			ReportActionKeys.addScreenShotInCaseOfFailInReport(title+"  Expected String is Not Matched");*/
 		}
-			catch(Error e){
-				ReportActionKeys.writeLogInCaseOfFailInChildTest("Expected String is "+"' "+title+" '"+"  but the String present on the screen is "+"' "+d.getTitle()+" '");
+			catch(Error e){System.out.println("TITLE NOT MATCHED");
+				/*ReportActionKeys.writeLogInCaseOfFailInChildTest("Expected String is "+"' "+title+" '"+"  but the String present on the screen is "+"' "+d.getTitle()+" '");
 				ReportActionKeys.addScreenShotInCaseOfFailInReport(title+"  Expected String is Not Matched");
-			}
+			*/}
 			/*if(d.getTitle().equals(title.trim())){
 				
 			ReportActionKeys.writeLogInCaseOfPass("Titile verified ");

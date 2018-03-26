@@ -21,8 +21,8 @@ public class ReportActionKeys extends TestBase {
 	public static ExtentTest child;
 	public 	String nameOfTheReport=null;
 
-	public  void setReportLocation(String nameOfTheReport){
-		this.nameOfTheReport=nameOfTheReport;
+	public  void setReportLocation(String nameOfTheRepor){
+		nameOfTheReport=nameOfTheRepor;
 		System.out.println("----------->    method called");
 		report=new ExtentReports("C:\\Reports/"+nameOfTheReport+".html");
 	report.loadConfig(new File(relativePath()+"\\config.xml"));

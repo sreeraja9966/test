@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]" parallel="none">
   <test name="loans(failed)" parallel="none">
     <classes>
-      <class name="waste.MouseHover">
+      <class name="waste.SilverScreen">
         <methods>
-          <include name="test"/>
+          <include name="testing"/>
         </methods>
-      </class> <!-- waste.MouseHover -->
+      </class> <!-- waste.SilverScreen -->
     </classes>
   </test> <!-- loans(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

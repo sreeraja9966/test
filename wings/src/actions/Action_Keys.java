@@ -51,11 +51,12 @@ import excel.ExcelUtils;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import robotFrameWork.Robot_Keys;
 import testBase.TestBase;
 
 public class Action_Keys extends TestBase {
 	
-	public String parentwindow=null;
+	public static String parentwindow=null;
 	
 	/*public static Screen s=new Screen();
 	public static Pattern p;*/
@@ -137,11 +138,11 @@ public class Action_Keys extends TestBase {
 		s.selectByVisibleText(testData);
 	}
 	
-	public  static void handle(){
+	public static  void handle(){
 		try{
-		implictwait(3000);
+		sleep(3000);
 		for (String winHandle : d.getWindowHandles()) {
-			
+			System.out.println(winHandle);
 		    d.switchTo().window(winHandle); // switch focus of WebDriver to the next found window handle (that's your newly opened window)
 		}}
 		catch(Exception e){
@@ -764,11 +765,15 @@ public static void clickWithJavaExecuter(String id){
 }
 
 
-public  void clickSilverlight(String xpath){
+public static void clickSilverlight(String xpath){
 	
-	try {
-		this.parentwindow=d.getWindowHandle();
+	try {sleep(3000);
+		parentwindow=d.getWindowHandle();
+		System.out.println("window in click metho----->"+parentwindow);
+		sleep(3000);
 		Action_Keys.clickWithJavaExecuter(xpath);
+		sleep(3000);
+		Action_Keys.handle();
 	} catch (Exception e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
@@ -780,9 +785,14 @@ public  void clickSilverlight(String xpath){
 
 
 public  void closeSilverlight(){
-	
-	d.close();
+	sleep(3000);
+	System.out.println("Child Window---->  "+d.getWindowHandle());
+	System.out.println("Parent Window---->  "+parentwindow);
+	sleep(3000);
 	System.out.println(parentwindow);
+	if(!parentwindow.equalsIgnoreCase(d.getWindowHandle())){
+		sleep(3000);
+	d.close();}
 	d.switchTo().window(parentwindow);
 	
 	
