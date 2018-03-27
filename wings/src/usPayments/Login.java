@@ -7,6 +7,7 @@ import java.awt.event.InputEvent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.opera.core.systems.internal.input.KeyEvent;
@@ -20,16 +21,16 @@ import testBase.TestBase;
 
 public class Login  extends TestBase{
 
-	
+	@Parameters({ "excelName" })
 	@Test
-	public void logIn() throws Exception{
+	public void logIn(String excelName) throws Exception{
 		
 		
 
+		System.out.println(relativePath()+"\\uspayment\\"+excelName);
+		DriverScript.loadExcel(relativePath()+"\\excelFile\\"+excelName,"Login","TC_01");
 		
-		DriverScript.loadExcel("E://uspayment//login.xls","Login","TC_01");
-		
-		DriverScript.loadExcel("E://uspayment//login.xls","Admin_Capture","TC_01");
+		/*DriverScript.loadExcel("E://uspayment//login.xls","Admin_Capture","TC_01");
 		DriverScript.loadExcel("E://uspayment//login.xls","Admin_Branch Capture","TC_01");
 		DriverScript.loadExcel("E://uspayment//login.xls","Admin_Customer","TC_01");
 		DriverScript.loadExcel("E://uspayment//login.xls","Admin_ATM","TC_01");
@@ -38,7 +39,7 @@ public class Login  extends TestBase{
 		DriverScript.loadExcel("E://uspayment//login.xls","Admin_Supervisor-Capture","TC_01");
 		DriverScript.loadExcel("E://uspayment//login.xls","Admin_Sort Pattern","TC_01");
 		DriverScript.loadExcel("E://uspayment//login.xls","Reports","TC_01");
-		DriverScript.loadExcel("E://uspayment//login.xls","Research","TC_01");
+		DriverScript.loadExcel("E://uspayment//login.xls","Research","TC_01");*/
 		//DriverScript.loadExcel("E://uspayment//login.xls","Reports","TC_01");
 		
 		

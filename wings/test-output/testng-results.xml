@@ -1,32 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17197" started-at="2018-03-26T12:17:30Z" finished-at="2018-03-26T12:17:47Z">
+  <suite name="Suite1" duration-ms="25" started-at="2018-03-27T07:47:16Z" finished-at="2018-03-27T07:47:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17197" started-at="2018-03-26T12:17:30Z" finished-at="2018-03-26T12:17:47Z">
-      <class name="savingpages.SavingAccountCreation">
-        <test-method status="PASS" signature="login()[pri:0, instance:savingpages.SavingAccountCreation@137fd8f]" name="login" is-config="true" duration-ms="9372" started-at="2018-03-26T17:47:30Z" finished-at="2018-03-26T17:47:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="savingaccount()[pri:0, instance:savingpages.SavingAccountCreation@137fd8f]" name="savingaccount" duration-ms="7814" started-at="2018-03-26T17:47:39Z" finished-at="2018-03-26T17:47:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- savingaccount -->
-        <test-method status="PASS" signature="handle(org.testng.ITestResult)[pri:0, instance:savingpages.SavingAccountCreation@137fd8f]" name="handle" is-config="true" duration-ms="1" started-at="2018-03-26T17:47:47Z" finished-at="2018-03-26T17:47:47Z">
+    <test name="loans" duration-ms="25" started-at="2018-03-27T07:47:16Z" finished-at="2018-03-27T07:47:16Z">
+      <class name="usPayments.Login">
+        <test-method status="FAIL" signature="logIn(java.lang.String)[pri:0, instance:usPayments.Login@2a67b4]" name="logIn" duration-ms="13" started-at="2018-03-27T13:17:16Z" finished-at="2018-03-27T13:17:16Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=savingaccount status=SUCCESS method=SavingAccountCreation.savingaccount()[pri:0, instance:savingpages.SavingAccountCreation@137fd8f] output={null}]]]>
+                <![CDATA[login.xls]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at usPayments.Login.logIn(Login.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- handle -->
-      </class> <!-- savingpages.SavingAccountCreation -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- logIn -->
+      </class> <!-- usPayments.Login -->
+    </test> <!-- loans -->
+  </suite> <!-- Suite1 -->
 </testng-results>

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]" parallel="none">
+  <parameter name="excelName" value="login.xls"/>
   <test name="loans(failed)" parallel="none">
+    <parameter name="excelName" value="login.xls"/>
     <classes>
-      <class name="waste.SilverScreen">
+      <class name="usPayments.Login">
         <methods>
-          <include name="testing"/>
+          <include name="logIn" invocation-numbers="0"/>
         </methods>
-      </class> <!-- waste.SilverScreen -->
+      </class> <!-- usPayments.Login -->
     </classes>
   </test> <!-- loans(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

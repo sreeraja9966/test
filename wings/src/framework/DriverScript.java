@@ -1,6 +1,9 @@
 package framework;
 
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+
 import excel.ExcelUtils;
 import testBase.TestBase;
 
@@ -19,14 +22,21 @@ public class DriverScript extends TestBase{
 	
 
 	public static void loadExcel(String filepath,String sheetname,String testcaseid)  {
-		try{
+		
+		
+		
+		
+		try{System.out.println(relativePath()+"\\SheetNames.txt");
+			BufferedReader in = new BufferedReader(new FileReader(relativePath()+"\\SheetNames.txt"));
 		String filePath = filepath;
 		String sheetName = sheetname;
 		String testId="";
+		String line;
 		
-		ExcelUtils.setExcelFile(filePath, sheetName);
-		int nr = ExcelUtils.getRowCount(sheetName);
 		
+		while((line = in.readLine()) != null)
+		{ExcelUtils.setExcelFile(filePath, line);
+			int nr = ExcelUtils.getRowCount(line);
 		for(int i=1; i<nr; i++){
 			testId =ExcelUtils.getCellData(i, 0);
 			actionname=ExcelUtils.getCellData(i, 2);
@@ -61,7 +71,7 @@ public class DriverScript extends TestBase{
 System.out.println("Failed to Load");				
 			}
 			}
-			}	
+		}}	
 		catch(Exception e){
 			
 		}}

@@ -759,10 +759,12 @@ public static void compareTwoStrings(String xpath,String expected){
 	}
 
 public static void clickWithJavaExecuter(String id){
+	try{
 	WebElement element = d.findElement(By.id(id));
 	JavascriptExecutor executor = (JavascriptExecutor)d;
 	executor.executeScript("arguments[0].click();", element);
-}
+	}
+	catch(Exception e){e.printStackTrace();}}
 
 
 public static void clickSilverlight(String xpath){

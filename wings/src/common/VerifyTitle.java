@@ -24,19 +24,19 @@ public class VerifyTitle extends TestBase{
 		Assert.assertEquals(d.getTitle(), title);
 		
 		System.out.println("Page Title is "+d.getTitle()+" and expected Title is "+title.trim()+"   --> Title Matched");
-			//ReportActionKeys.writeLogInCaseOfPass("Page Title is "+d.getTitle()+" and expected Title is "+title.trim()+"   --> Title Matched");
+			ReportActionKeys.writeLogInCaseOfPass("Page Title is "+d.getTitle()+" and expected Title is "+title.trim()+"   --> Title Matched");
 		
 			
 		
 		}
 		catch(Exception e){System.out.println("TITLE NOT MATCHED");
-			/*ReportActionKeys.writeLogInCaseOfFailInChildTest("Expected String is "+"' "+title+" '"+"  but the String present on the screen is "+"' "+d.getTitle()+" '");
-			ReportActionKeys.addScreenShotInCaseOfFailInReport(title+"  Expected String is Not Matched");*/
+			ReportActionKeys.writeLogInCaseOfFailInChildTest("Expected String is "+"' "+title+" '"+"  but the String present on the screen is "+"' "+d.getTitle()+" '");
+			ReportActionKeys.addScreenShotInCaseOfFailInReport(title+"  Expected String is Not Matched");
 		}
 			catch(Error e){System.out.println("TITLE NOT MATCHED");
-				/*ReportActionKeys.writeLogInCaseOfFailInChildTest("Expected String is "+"' "+title+" '"+"  but the String present on the screen is "+"' "+d.getTitle()+" '");
+				ReportActionKeys.writeLogInCaseOfFailInChildTest("Expected String is "+"' "+title+" '"+"  but the String present on the screen is "+"' "+d.getTitle()+" '");
 				ReportActionKeys.addScreenShotInCaseOfFailInReport(title+"  Expected String is Not Matched");
-			*/}
+			}
 			/*if(d.getTitle().equals(title.trim())){
 				
 			ReportActionKeys.writeLogInCaseOfPass("Titile verified ");
