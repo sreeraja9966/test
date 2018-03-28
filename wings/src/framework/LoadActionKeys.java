@@ -162,6 +162,9 @@ public class LoadActionKeys {
 		case "setReportLocation":
 			obj1.setReportLocation(testData);
 			break;
+		case "setReportName":
+			obj1.setReportLocation(testData);
+			break;
 
 		case "startTestInReport":
 			obj1.startTest(testData);

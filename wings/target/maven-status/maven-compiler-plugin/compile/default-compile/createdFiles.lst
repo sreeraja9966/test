@@ -33,6 +33,7 @@ waste\Api$ReadJsonObject.class
 loanpages\LoanDisbursment.class
 common\CustomerSearch.class
 savingpages\CashReceipt.class
+waste\LoadWord.class
 loanCommon\LoanAccountNumber.class
 loanpages\GoldLoanCreation.class
 waste\callGson.class

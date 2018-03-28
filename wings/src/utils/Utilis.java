@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
@@ -26,7 +27,14 @@ public static WebDriver strartBrowser(String browser){
 			}
 	else if(browser.equals("chrome")){
 		System.setProperty("webdriver.chrome.driver", relativePath()+"\\Drivers\\chromedriver.exe");
-		d= new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		 
+		// add parameter which will disable the extension
+		options.addArguments("--disable-extensions");
+		 
+		// Start the chrome session
+		 d = new ChromeDriver(options);
+		
 		return d;
 		}
 	else if(browser.equalsIgnoreCase("ie")){
