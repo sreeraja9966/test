@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="18756" started-at="2018-03-30T06:46:26Z" finished-at="2018-03-30T06:46:44Z">
+  <suite name="Suite1" duration-ms="37640" started-at="2018-03-30T07:17:17Z" finished-at="2018-03-30T07:17:54Z">
     <groups>
     </groups>
-    <test name="loans" duration-ms="18756" started-at="2018-03-30T06:46:26Z" finished-at="2018-03-30T06:46:44Z">
+    <test name="loans" duration-ms="37640" started-at="2018-03-30T07:17:17Z" finished-at="2018-03-30T07:17:54Z">
       <class name="usPayments.Login">
-        <test-method status="PASS" signature="logIn(java.lang.String)[pri:0, instance:usPayments.Login@2a67b4]" name="logIn" duration-ms="18740" started-at="2018-03-30T12:16:26Z" finished-at="2018-03-30T12:16:44Z">
+        <test-method status="PASS" signature="logIn(java.lang.String)[pri:0, instance:usPayments.Login@2a67b4]" name="logIn" duration-ms="37631" started-at="2018-03-30T12:47:17Z" finished-at="2018-03-30T12:47:54Z">
           <params>
             <param index="0">
               <value>

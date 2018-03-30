@@ -88,17 +88,15 @@ public class Action_Keys extends TestBase {
 			//By obj=By.xpath(testObj);
 		
 			//d.findElement(By.xpath(testObj)).click();
-		System.out.println(	isElementPresent((testObj)));
 		
-		if(isElementPresent((testObj))){
-			FindElement.searchClickableElement(d, testObj).click();
-		}
-		else{try {
-			throw new Exception("invalid");
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}}
+		
+			try {
+				FindElement.searchClickableElement(d, testObj).click();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
 		
 		
 		
