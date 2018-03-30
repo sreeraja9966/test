@@ -39,7 +39,7 @@ public static WebDriver strartBrowser(String browser){
 		}
 	else if(browser.equalsIgnoreCase("ie")){
 		try{
-		System.setProperty("webdriver.ie.driver", relativePath()+"\\Drivers\\IEDriverServer1.exe");
+		System.setProperty("webdriver.ie.driver", relativePath()+"\\Drivers\\IEDriverServer.exe");
 		d= new InternetExplorerDriver();
 		
 		return d;}

@@ -24,7 +24,7 @@ public class ReportActionKeys extends TestBase {
 	public  void setReportLocation(String nameOfTheRepor){
 		nameOfTheReport=nameOfTheRepor;
 		System.out.println("----------->    method called");
-		report=new ExtentReports("C:\\Reports/"+nameOfTheReport+".html");
+		report=new ExtentReports(relativePath()+"\\Reports/"+nameOfTheReport+".html");
 	report.loadConfig(new File(relativePath()+"\\config.xml"));
 	
 	}
@@ -46,7 +46,7 @@ public static void writeLogToReport(){
 	report.flush();
 }
 public  void appendToExstingReport(String path){
-	report=new ExtentReports("C:\\Reports/"+nameOfTheReport+".html", false);
+	report=new ExtentReports(relativePath()+"\\Reports/"+nameOfTheReport+".html", false);
 	logger=report.startTest(path);
 	
 	//report=new ExtentReports("C:\\Reports/"+path+".html");
@@ -112,6 +112,8 @@ public static void addScreenShotInReport(String name){
 	System.out.println("--------->addingScreenShotInReport");
 	
 	
+	
+	
 	 try {
 	 File scr = ((TakesScreenshot)d).getScreenshotAs(OutputType.FILE);
        
@@ -123,7 +125,7 @@ public static void addScreenShotInReport(String name){
 	String date=Action_Keys.getDate();
 	
 	 destination ="screenShots/"+date+name+".png";
-	 File finalDestination = new File("\\Reports\\screenShots/"+date+name+".png");
+	 File finalDestination = new File(relativePath()+"\\Reports\\screenShots/"+date+name+".png");
 	 FileUtils.copyFile(scr, finalDestination);
 	 } catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -155,7 +157,8 @@ public static void addScreenShotInReportInCaseOfChild(String name){
 	String date=Action_Keys.getDate();
 	
 	 destination ="screenShots/"+date+name+".png";
-	 File finalDestination = new File("\\Reports\\screenShots/"+date+name+".png");
+	 
+	 File finalDestination = new File(relativePath()+"\\Reports\\screenShots/"+date+name+".png");
 	 FileUtils.copyFile(scr, finalDestination);
 	 } catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -185,7 +188,7 @@ public static void addScreenShotInCaseOfFailInReport(String name){
 	String date=Action_Keys.getDate();
 	
 	 destination ="screenShots/"+date+name+".png";
-	 File finalDestination = new File("\\Reports\\screenShots/"+date+name+".png");
+	 File finalDestination = new File(relativePath()+"\\Reports\\screenShots/"+date+name+".png");
 	 FileUtils.copyFile(scr, finalDestination);
 	 } catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -214,7 +217,7 @@ public static void addScreenShotInCaseOfFailInReportInChild(String name){
 	String date=Action_Keys.getDate();
 	
 	 destination ="screenShots/"+date+name+".png";
-	 File finalDestination = new File("\\Reports\\screenShots/"+date+name+".png");
+	 File finalDestination = new File(relativePath()+"\\Reports\\screenShots/"+date+name+".png");
 	 FileUtils.copyFile(scr, finalDestination);
 	 } catch (Exception e) {
 			// TODO Auto-generated catch block

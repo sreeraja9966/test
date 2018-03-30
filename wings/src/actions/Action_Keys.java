@@ -84,16 +84,14 @@ public class Action_Keys extends TestBase {
 	}
 
 	public static void clickBtn(String testObj){
-		System.out.println(d);
-			System.out.println("click");
-			System.out.println(testObj);
-			By obj=By.xpath(testObj);
+			
+			//By obj=By.xpath(testObj);
 		
 			//d.findElement(By.xpath(testObj)).click();
 		System.out.println(	isElementPresent((testObj)));
 		
 		if(isElementPresent((testObj))){
-			d.findElement(obj).click();
+			FindElement.searchClickableElement(d, testObj).click();
 		}
 		else{try {
 			throw new Exception("invalid");
@@ -467,8 +465,24 @@ public static void goldImageSearch(String xpathofImg,String requiredString){
 
 public static void scrollDown(){
 	
-	JavascriptExecutor jse = (JavascriptExecutor)d;
-	jse.executeScript("window.scrollBy(0,250)", "");
+	try {
+		JavascriptExecutor jse = (JavascriptExecutor)d;
+		jse.executeScript("window.scrollBy(0,250)", "");
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
+
+public static void scrollToReachAnElement(String xpath){
+	try {
+		WebElement element = d.findElement(By.xpath(xpath));
+		((JavascriptExecutor) d).executeScript("arguments[0].scrollIntoView();", element);
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
 }
 
 public static void calender(String xpathofdob,String month){
