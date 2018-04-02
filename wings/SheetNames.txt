@@ -1,1 +1,6 @@
 Login
+Administration
+Operations
+Supervisor
+Reports
+Research

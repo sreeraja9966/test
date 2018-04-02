@@ -473,10 +473,12 @@ public static void scrollDown(){
 }
 
 public static void scrollToReachAnElement(String xpath){
-	try {
+	try {	
+		System.out.println(d);
 		WebElement element = d.findElement(By.xpath(xpath));
-		((JavascriptExecutor) d).executeScript("arguments[0].scrollIntoView();", element);
-	} catch (Exception e) {
+		((JavascriptExecutor) d).executeScript("arguments[0].scrollIntoView(true);", element);
+		Thread.sleep(3000);
+	} catch (InterruptedException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
@@ -839,6 +841,15 @@ public  void closeSilverlight(){
 	d.switchTo().window(winHandleBefore);*/
 
 
+}
+
+public static void waitFor(int time){
+	try {
+		Thread.sleep(time);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 }
 
 }

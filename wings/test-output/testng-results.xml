@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="37640" started-at="2018-03-30T07:17:17Z" finished-at="2018-03-30T07:17:54Z">
+  <suite name="Suite1" duration-ms="2383302" started-at="2018-04-02T07:17:00Z" finished-at="2018-04-02T07:56:44Z">
     <groups>
     </groups>
-    <test name="loans" duration-ms="37640" started-at="2018-03-30T07:17:17Z" finished-at="2018-03-30T07:17:54Z">
+    <test name="loans" duration-ms="2383302" started-at="2018-04-02T07:17:00Z" finished-at="2018-04-02T07:56:44Z">
       <class name="usPayments.Login">
-        <test-method status="PASS" signature="logIn(java.lang.String)[pri:0, instance:usPayments.Login@2a67b4]" name="logIn" duration-ms="37631" started-at="2018-03-30T12:47:17Z" finished-at="2018-03-30T12:47:54Z">
+        <test-method status="PASS" signature="logIn(java.lang.String)[pri:0, instance:usPayments.Login@2a67b4]" name="logIn" duration-ms="2383286" started-at="2018-04-02T12:47:00Z" finished-at="2018-04-02T13:26:44Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[login.xls]]>
+                <![CDATA[onviewpaymentsmanager609navigations.xls]]>
               </value>
             </param>
           </params>

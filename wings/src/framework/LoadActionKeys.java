@@ -83,6 +83,10 @@ public class LoadActionKeys {
 		case "sleeping":
 			obj.sleep();
 			break;
+		case "waitFor":
+			obj.waitFor(testDataAsInt1);
+			break;
+			
 		case "rightClick":
 			Action_Keys.rightClick(testObject);
 			break;
@@ -140,6 +144,9 @@ public class LoadActionKeys {
 			break;
 		case "scrollDown":
 			Action_Keys.scrollDown();
+			break;
+		case "scrollToSpecifiedElement":
+			Action_Keys.scrollToReachAnElement(testObject);
 			break;
 		case "calender":
 			Action_Keys.calender(testObject, testData);
@@ -281,6 +288,11 @@ public class LoadActionKeys {
 			
 		case "roboDropDown":
 			Robot_Keys.roboDropDown(testDataAsInt1, testDataAsInt2, testData);
+			break;
+			
+			
+		case "AcceptSilverScreenAlert":
+			Robot_Keys.AcceptSilverScreenAlert();
 			break;
 			
 	

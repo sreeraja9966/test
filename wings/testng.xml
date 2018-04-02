@@ -2,7 +2,8 @@
 <suite name="Suite1" parallel="none" verbose="1" >
   <test name="loans" >
   
-  <parameter name="excelName" value="login.xls"/>
+  <parameter name="excelName" value="onviewpaymentsmanager609navigations.xls"/>
+  
     <classes>
     
      

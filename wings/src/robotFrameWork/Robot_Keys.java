@@ -67,4 +67,14 @@ public class Robot_Keys extends AdjustResolution{
 		roboSendKeys(value);
 		roboMouseOperation("left");
 	}
+	
+	public static void AcceptSilverScreenAlert(){
+		try {
+			robo.keyPress(KeyEvent.VK_ENTER);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 }
