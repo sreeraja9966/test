@@ -11,6 +11,7 @@ usPayments\Resolution.class
 waste\DatePicker.class
 apiDataProvider\DataProviderWithCondtion.class
 commonSvnFunctions\ProductId.class
+waste\OnlyNumarics.class
 appium\AndraBank.class
 rdpages\RdAccountOpening.class
 waste\Parent.class
@@ -64,14 +65,17 @@ waste\ColourPrint.class
 utils\Utilis.class
 seo\AdharValut.class
 framework\DriverScript.class
+waste\UnZip.class
 waste\Testing.class
 waste\Random.class
 testBase\TestBase.class
+waste\FileExists.class
 appium\Calculator.class
 accountClosure\Savings.class
 waste\HttpURLConnectionExample2.class
 apiUrlLoading\ApiUsingGson.class
 apiUrlLoading\Api.class
+waste\ScrollToAnElement.class
 waste\RoboShot.class
 framework\LoadActionKeys.class
 waste\Db.class

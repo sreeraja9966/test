@@ -7,22 +7,22 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-public class SkipFailedTest {
+import actions.Action_Keys;
+import testBase.TestBase;
+
+public class SkipFailedTest extends TestBase{
 	
-	static WebDriver d ;
+	
 	@Test
 	public static void skipTest(){
-		d=new FirefoxDriver();
-		d.get("https://www.google.com/gmail/about/");
-		d.findElement(By.xpath("//a[contains(text(),'Sign In')]")).click();
-		
+		strartBrowser("firefox");
+		d.get("file:///C:/Users/sgarlapati/Desktop/alert.html");
+		d.findElement(By.xpath("//input[@type='button']")).click();
+		Action_Keys.getNumericsofAlert();
+		System.out.println("goooooooooooooooo  ");
+		Action_Keys.printAlretText();
 	}
 	
-	@AfterMethod
-	public void handle(ITestResult result){
-		if(result.getStatus()==ITestResult.FAILURE){
-			d.get("https://www.google.co.in/?gws_rd=ssl");
-		}
-	}
+	
 
 }

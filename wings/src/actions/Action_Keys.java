@@ -57,7 +57,7 @@ import testBase.TestBase;
 public class Action_Keys extends TestBase {
 	
 	public static String parentwindow=null;
-	
+	public static String alertText=null;
 	/*public static Screen s=new Screen();
 	public static Pattern p;*/
 	public static AppiumDriver<MobileElement> and ;
@@ -362,13 +362,30 @@ catch (Error e) {
 
 	
 }
-public static void gettextofAlert(){
-	String a=d.switchTo().alert().getText();
-	System.out.println(a+"<--------alert");
+public static String gettextofAlert(){
+	alertText=d.switchTo().alert().getText();
+	System.out.println(alertText+"<--------alert");
 	//d.switchTo().defaultContent();
-	
+	return alertText;
+}
 
-	
+
+public static String getNumericsofAlert(){
+	 alertText=d.switchTo().alert().getText();
+	alertText = alertText.replaceAll("\\D+","");
+	System.out.println(alertText+"<--------alert");
+	//d.switchTo().defaultContent();
+	return alertText;
+}
+
+
+
+public static void setAlretText(String xpath){
+	FindElement.searchClickableElement(d, xpath).sendKeys(alertText);
+}
+
+public static void printAlretText(){
+	System.out.println(alertText);
 }
 
 public static void saveText(String xpath,String textobj){

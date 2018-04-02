@@ -111,6 +111,17 @@ public class LoadActionKeys {
 			Action_Keys.gettextofAlert();
 			break;
 			
+		case "getNumericsofAlert":
+			Action_Keys.getNumericsofAlert();
+			break;
+		case "setAlretText":
+			Action_Keys.setAlretText(testObject);
+			break;
+			
+		case "printAlretText":
+			Action_Keys.printAlretText();
+			break;
+			
 		case "swithToDefaultContent":
 			Action_Keys.swithToDefaultContent();
 			break;

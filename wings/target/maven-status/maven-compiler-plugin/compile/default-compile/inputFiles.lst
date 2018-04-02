@@ -22,6 +22,7 @@ C:\Users\sgarlapati\git\wings\src\waste\Db.java
 C:\Users\sgarlapati\git\wings\src\apiDataProvider\DataProviderWithCondtion.java
 C:\Users\sgarlapati\git\wings\src\waste\Robotic.java
 C:\Users\sgarlapati\git\wings\src\actions\Action_Keys.java
+C:\Users\sgarlapati\git\wings\src\waste\FileExists.java
 C:\Users\sgarlapati\git\wings\src\waste\DataDrive.java
 C:\Users\sgarlapati\git\wings\src\getAutomation\AddressGetCall.java
 C:\Users\sgarlapati\git\wings\src\waste\MouseHover.java
@@ -44,6 +45,7 @@ C:\Users\sgarlapati\git\wings\src\accountClosure\Savings.java
 C:\Users\sgarlapati\git\wings\src\apiUrlLoading\LoadUrl.java
 C:\Users\sgarlapati\git\wings\src\loanpages\LoanAccountCreation.java
 C:\Users\sgarlapati\git\wings\src\savingpages\SavingAccountCreation.java
+C:\Users\sgarlapati\git\wings\src\waste\UnZip.java
 C:\Users\sgarlapati\git\wings\src\waste\Parent.java
 C:\Users\sgarlapati\git\wings\src\KYC\KycCreation.java
 C:\Users\sgarlapati\git\wings\src\robotFrameWork\Testing.java
@@ -58,6 +60,7 @@ C:\Users\sgarlapati\git\wings\src\waste\Testing.java
 C:\Users\sgarlapati\git\wings\src\apiUrlLoading\Api.java
 C:\Users\sgarlapati\git\wings\src\commonSvnFunctions\KeyValuePair.java
 C:\Users\sgarlapati\git\wings\src\appium\Calculator.java
+C:\Users\sgarlapati\git\wings\src\waste\ScrollToAnElement.java
 C:\Users\sgarlapati\git\wings\src\actions\ReportActionKeys.java
 C:\Users\sgarlapati\git\wings\src\robotFrameWork\Robot_Keys.java
 C:\Users\sgarlapati\git\wings\src\savingcommon\SavingAccountNumber.java
@@ -71,6 +74,7 @@ C:\Users\sgarlapati\git\wings\src\fdPages\FdAccountCreation.java
 C:\Users\sgarlapati\git\wings\src\robotFrameWork\AdjustResolution.java
 C:\Users\sgarlapati\git\wings\src\waste\Random.java
 C:\Users\sgarlapati\git\wings\src\framework\LoadReportActions.java
+C:\Users\sgarlapati\git\wings\src\waste\OnlyNumarics.java
 C:\Users\sgarlapati\git\wings\src\waste\RoboShot.java
 C:\Users\sgarlapati\git\wings\src\framework\DriverScript.java
 C:\Users\sgarlapati\git\wings\src\waste\SilverScreen.java
